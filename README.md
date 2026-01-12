@@ -1,80 +1,103 @@
-Comparação de Cartas – Países (Linguagem C)
-📌 Descrição
+# Jogo de Comparação de Cartas – Países (Linguagem C)
 
-Este programa em linguagem C simula a comparação entre duas cartas de países, utilizando atributos demográficos e econômicos.
-O usuário insere os dados de dois países e escolhe, por meio de um menu, qual atributo deseja comparar.
-O programa então indica qual carta venceu ou se houve empate.
+## Descrição do Projeto
 
-🧾 Atributos analisados
+Este projeto implementa um jogo em linguagem C no qual o usuário cadastra duas cartas de países e realiza a comparação entre elas com base em dois atributos numéricos escolhidos pelo jogador.
 
-Para cada país, o programa coleta e calcula:
+O sistema permite:
+- Cadastro de dados dos países
+- Escolha interativa de atributos
+- Comparação individual de cada atributo
+- Soma dos atributos escolhidos
+- Determinação da carta vencedora ou empate
 
-Nome do país
-População
-Área territorial
-PIB
-Número de pontos turísticos
-Densidade demográfica
-PIB per capita
+---
 
-📊 Funcionalidades
+## Dados de Cada Carta
 
-Leitura de dados de dois países
+Para cada país, são coletadas as seguintes informações:
 
-Cálculo automático de:
-Densidade demográfica
-PIB per capita
-Menu interativo para escolha do atributo de comparação
-Comparação entre as cartas usando switch/case
-Indicação clara do vencedor ou empate
+- Nome do país
+- População
+- Área territorial
+- PIB
+- Número de pontos turísticos
 
-🧠 Menu de Comparação
+A partir desses dados, o sistema calcula automaticamente:
+- Densidade demográfica
+- PIB per capita
 
-O usuário pode escolher comparar:
+---
 
-População
-Área
-PIB
-Número de pontos turísticos
-Densidade demográfica
+## Funcionamento do Jogo
 
-🛠️ Tecnologias utilizadas
+### 1. Cadastro das Cartas
+O usuário insere os dados da Carta 1 e da Carta 2 via terminal.
 
-Linguagem: C
+### 2. Escolha dos Atributos
+O sistema apresenta dois menus sequenciais para que o jogador escolha dois atributos diferentes para comparação.
 
-Biblioteca padrão:
+Opções disponíveis:
+1. População  
+2. Área  
+3. PIB  
+4. Número de pontos turísticos  
+5. Densidade demográfica  
 
-#include <stdio.h>
+Caso o usuário escolha o mesmo atributo duas vezes, o programa exibe uma mensagem informando o erro e solicita que o processo seja reiniciado.
 
-▶️ Como executar
+---
 
-Compile o código:
+## Regras de Comparação
 
-gcc nome_do_arquivo.c -o logicaSuperTrunfo
+- Para a maioria dos atributos, vence a carta com o maior valor.
+- Exceção:
+  - Densidade demográfica → vence a carta com o menor valor.
+
+Cada atributo escolhido é comparado individualmente e somado ao total da respectiva carta.
+
+---
+
+## Soma dos Atributos
+
+Após a comparação dos dois atributos:
+- O sistema soma os valores escolhidos para cada carta.
+- A carta com a maior soma total vence a rodada.
+
+### Tratamento de Empates
+- Se as somas forem iguais, o sistema exibe a mensagem: "Empate!".
+
+---
+
+## Resultado Final
+
+Ao final da execução, o programa exibe:
+- O nome dos dois países
+- Os atributos utilizados na comparação
+- Os valores de cada atributo para cada carta
+- A soma total dos atributos
+- A carta vencedora ou a indicação de empate
+
+---
+
+## Tecnologias Utilizadas
+
+- Linguagem C
+- Estruturas de decisão (if, else, switch)
+- Entrada e saída padrão (scanf, printf)
+- Operações aritméticas
+
+---
+
+## Objetivo Educacional
+
+Projeto desenvolvido como parte da fase mestre da disciplina, com foco em:
+- Lógica de programação
+- Estruturas condicionais
+- Comparações múltiplas
+- Orga
 
 
-Execute o programa:
-
-./logicaSuperTrunfo
-
-
-Siga as instruções exibidas no terminal.
-
-📚 Observações
-
-O programa foi desenvolvido com foco didático, para consolidar conceitos como:
-
-Entrada e saída de dados
-Operadores relacionais
-Estruturas condicionais (if/else)
-Estrutura de decisão (switch/case)
-
-Para simplificação, nomes de países são lidos sem espaços.
-
-✨ Autoria
-
-Projeto desenvolvido como parte da fase mestre da disciplina de Introdução à Programação, com foco em lógica, organização e comparação de dados.
-
-Readme escrito com a ajuda da IA.
+READNE escrito com a ajuda da IA.
 
 Edineusa Fernandes 
